@@ -1,9 +1,11 @@
 import React from "react";
+import { Icon as Iconify } from '@iconify/react';
 import styled from "styled-components";
 
 interface IIconProps {
   name: string;
   size?: string;
+  namespace?: string;
 }
 
 interface IIconButtonProps {
@@ -23,7 +25,7 @@ const StyledButton = styled.button`
   }
 `;
 
-const IconContainer = styled.i`
+/*const IconContainer = styled.i`
   font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
@@ -40,15 +42,15 @@ const IconContainer = styled.i`
   font-feature-settings: "liga";
   font-size: ${(props) => props.about};
   color: ${(props) => props.theme.mainColor};
-`;
+`;*/
 
 /**
  * Renders an Icon
  * @param {IIconProps} props props needed for the given icon
  * @returns {React.ReactNode} the icon node
  */
-export const Icon = ({ name, size }: IIconProps) => (
-  <IconContainer about={size}>{name}</IconContainer>
+export const Icon = ({ name, namespace, size = "" }: IIconProps) => (
+  <Iconify icon={namespace + ":" + name} fontSize={size} />
 );
 
 /**
@@ -58,7 +60,7 @@ export const Icon = ({ name, size }: IIconProps) => (
  */
 export const IconButton = ({ testid, icon, onClick }: IIconButtonProps) => (
   <StyledButton data-testid={testid} onClick={onClick}>
-    <Icon name={icon} />
+    <Iconify icon={icon} />
   </StyledButton>
 );
 

@@ -1,6 +1,5 @@
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 
-import SearchBar from "./components/searchBar";
 import Greeter from "./components/greeter";
 import AppList from "./components/appList";
 import BookmarkList from "./components/bookmarks";
@@ -47,11 +46,13 @@ const App = () => {
     setScheme("light-theme");
   }
 
+  bookmarkData.error = true;
+  imprintData.error = true;
+  
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <div>
-        <SearchBar search={searchProviderData?.search} />
         {(!themeData.error || !searchProviderData.error) && (
           <Settings
             themes={themeData?.themes}

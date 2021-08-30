@@ -45,6 +45,7 @@ export interface IAppProps {
   url: string;
   displayURL: string;
   newTab?: boolean;
+  iconNamespace?: string;
 }
 
 /**
@@ -52,7 +53,7 @@ export interface IAppProps {
  * @param {IAppProps} props the props of the given app
  * @returns {React.ReactNode} the child node for the given app
  */
-const App = ({ name, icon, url, displayURL, newTab }: IAppProps) => {
+const App = ({ name, icon, iconNamespace = "mdi", url, displayURL, newTab }: IAppProps) => {
   const linkAttrs =
     newTab !== undefined && newTab
       ? {
@@ -64,7 +65,7 @@ const App = ({ name, icon, url, displayURL, newTab }: IAppProps) => {
   return (
     <AppContainer href={url} {...linkAttrs}>
       <IconContainer>
-        <Icon name={icon} />
+        <Icon name={icon} namespace={iconNamespace} size="32" />
       </IconContainer>
       <DetailsContainer>
         <AppName>{name}</AppName>

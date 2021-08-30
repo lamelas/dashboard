@@ -1,7 +1,7 @@
 import AppCategory, { IAppCategoryProps } from "./appCategory";
 import { IAppProps } from "./app";
 
-import { Headline, ListContainer } from "./elements";
+import { ListContainer } from "./elements";
 
 export interface IAppListProps {
   categories?: Array<IAppCategoryProps>;
@@ -17,7 +17,6 @@ const AppList = ({ categories, apps }: IAppListProps) => {
   if (apps || categories) {
     return (
       <ListContainer>
-        <Headline>Applications</Headline>
         {categories &&
           categories.map(({ name, items }, index) => (
             <AppCategory

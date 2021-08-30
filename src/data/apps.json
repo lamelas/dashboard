@@ -1,71 +1,84 @@
 {
   "categories": [
     {
-      "name": "Networking",
+      "name": "Media",
       "items": [
         {
-          "name": "pfSense",
-          "displayURL": "example.com",
-          "url": "https://example.com",
-          "icon": "security"
+          "name": "Plex",
+          "displayURL": "Media Center",
+          "url": "zaphod.local:32400",
+          "icon": "plex"
         },
         {
-          "name": "Pihole",
-          "displayURL": "example.com",
-          "url": "https://example.com",
-          "icon": "vpn_lock"
+          "name": "Radarr",
+          "displayURL": "Download Filmes",
+          "url": "zaphod.local:9523",
+          "icon": "movie"
+        },
+        {
+          "name": "Sonarr",
+          "displayURL": "Download Séries",
+          "url": "zaphod.local:9522",
+          "icon": "television-classic"
         }
       ]
     },
     {
-      "name": "Monitoring",
+      "name": "Torrents",
       "items": [
         {
-          "name": "Tautulli",
-          "displayURL": "example.com",
-          "url": "https://example.com",
-          "icon": "bar_chart"
+          "name": "Transmission",
+          "displayURL": "Download",
+          "url": "zaphod.local:9520",
+          "icon": "download"
         },
         {
-          "name": "Grafana",
-          "displayURL": "example.com",
-          "url": "https://example.com",
-          "icon": "show_chart"
+          "name": "Jackett",
+          "displayURL": "Pesquisa",
+          "url": "zaphod.local:9521",
+          "icon": "tshirt-crew-outline"
         }
       ]
-    }
-  ],
-  "apps": [
-    {
-      "name": "Plex",
-      "displayURL": "example.com",
-      "url": "https://example.com",
-      "icon": "tv"
     },
     {
-      "name": "NextCloud",
-      "displayURL": "example.com",
-      "url": "https://example.com",
-      "icon": "filter_drama"
+      "name": "Outros",
+      "items": [
+        {
+          "name": "Calibre",
+          "displayURL": "Ebooks",
+          "url": "zaphod.local:9501",
+          "icon": "book-open-blank-variant"
+        }
+      ]
     },
     {
-      "name": "Ghost",
-      "displayURL": "example.com",
-      "url": "https://example.com",
-      "icon": "rss_feed"
-    },
-    {
-      "name": "Minecraft",
-      "displayURL": "example.com",
-      "url": "https://example.com",
-      "icon": "games"
-    },
-
-    {
-      "name": "ESXi",
-      "displayURL": "example.com",
-      "url": "https://example.com",
-      "icon": "dns"
+      "name": "Administração",
+      "items": [
+        {
+          "name": "Portainer",
+          "displayURL": "Gestão do Docker",
+          "url": "zaphod.local:9500",
+          "icon": "docker"
+        },
+        {
+          "name": "Homebridge",
+          "displayURL": "Acessórios HomeKit",
+          "url": "zaphod.local:8581",
+          "icon": "bridge"
+        },
+        {
+          "name": "Screen Sharing",
+          "displayURL": "Acesso VNC",
+          "url": "vnc://zaphod.local:5900",
+          "icon": "remote-desktop"
+        },
+        {
+          "name": "Router",
+          "displayURL": "Vodafone",
+          "url": "10.0.1.1",
+          "icon": "router"
+        }
+      ]
     }
   ]
 }
